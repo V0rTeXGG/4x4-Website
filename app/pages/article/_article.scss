@@ -1,0 +1,255 @@
+.article {
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -280px;
+    right: -30px;
+    width: 582px;
+    height: 749px;
+    background: url("../../img/image/vektor-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__info {
+    margin-bottom: 50px;
+  }
+
+  &__img-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 390px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: inherit;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__content {
+    max-width: 640px;
+    margin: 0 auto 50px auto;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 145%;
+    @include media(max, 575) {
+      font-size: 18px;
+    }
+
+    h2 {
+      margin: 60px 0;
+    }
+
+    h3 {
+      margin: 50px 0;
+    }
+
+    p {
+      margin-bottom: 30px;
+    }
+
+    a {
+      position: relative;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 145%;
+      @include media(max, 575) {
+        font-size: 18px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 1px;
+        background-color: $color-text-main;
+      }
+    }
+
+    blockquote {
+      margin: 50px 0;
+      padding: 32px 0;
+      text-align: center;
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 135%;
+      border-bottom: 1px solid $color-red-light;
+      border-top: 1px solid $color-red-light;
+    }
+
+    figure {
+      margin: 50px -160px 50px -160px;
+      padding: 0;
+      @include media(max, 991) {
+        margin: 50px 0;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+      }
+
+      figcaption {
+        margin-top: 16px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 135%;
+        letter-spacing: 0.32px;
+        color: $color-border;
+      }
+    }
+
+    ol, ul {
+      padding-left: 40px;
+      margin-bottom: 30px;
+    }
+
+    ol {
+
+      & > li {
+        counter-increment: num;
+      }
+
+      li {
+        position: relative;
+        &:before {
+          content:'0' counter(num) '.';
+          position: absolute;
+          left: -40px;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 145%;
+        }
+      }
+    }
+
+    ul {
+      li {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: -24px;
+          top: 11px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: $color-red-light;
+        }
+      }
+    }
+
+    li {
+      margin-bottom: 16px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 50px 0;
+      overflow-x: auto;
+
+      p {
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 145%;
+      }
+
+      td {
+        padding: 12px 16px 12px 12px;
+
+        &:not(:first-child) {
+          padding-left: 0;
+        }
+
+        &:last-child {
+          padding-right: 12px;
+        }
+
+        &:last-child {
+          padding-right: 12px;
+        }
+      }
+
+      tr {
+        &:not(:first-child) {
+          td {
+            padding-top: 8px;
+            padding-bottom: 8px;
+          }
+        }
+
+        background-color: $color-border;
+
+        &:nth-of-type(odd) {
+          background-color: $color-black;
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    max-width: 640px;
+    margin: 0 auto;
+
+    &-text {
+      font-family: $font-roboto;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 160%;
+      color: $color-border;
+    }
+  }
+}
+
+.recommendation {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 582px;
+    height: 749px;
+    background: url("../../img/image/vector-left.png");
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+    margin-bottom: 60px;
+    @include media(max, 991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__card {
+    max-width: 100%;
+  }
+}
+

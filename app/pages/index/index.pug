@@ -1,0 +1,338 @@
+extends ../../template/template.pug
+include ../../blocks/banner/banner.pug
+include ../../blocks/service/service.pug
+include ../../blocks/card/card.pug
+include ../../blocks/brand/brand.pug
+include  ../../blocks/components/accordion/accordion
+include  ../../blocks/components/form/form.pug
+block mainwrapper
+  section.banner.section--mb-90
+    .banner__slider
+      .banner__slider-controls.slider-controls
+        button.slider-controls__btn(data-swiper="banner-button-prev")
+          svg.slider-controls__btn-icon
+            use(href="#icon-slider-prev")
+        .banner__slider-pagination(data-swiper="banner-pagination")
+        button.slider-controls__btn(data-swiper="banner-button-next")
+          svg.slider-controls__btn-icon
+            use(href="#icon-slider-next")
+      .slider
+        .swiper(data-swipper="banner")
+          .swiper-wrapper
+            .swiper-slide
+              +banner('banner-1.png', 'Мы знаем, что нужно вашему внедорожнику')
+            .swiper-slide
+              +banner('banner-2.png', 'Мы знаем, что нужно вашему внедорожнику')
+            .swiper-slide
+              +banner('banner-3.png', 'Мы знаем, что нужно вашему внедорожнику')
+            .swiper-slide
+              +banner('banner-4.png', 'Мы знаем, что нужно вашему внедорожнику')
+            .swiper-slide
+              +banner('banner-5.png', 'Мы знаем, что нужно вашему внедорожнику')
+  section.official.section--mb-120(id="tibus")
+    .container
+      .official__top
+        .official__title
+          h1 Официальный представитель TIBUS в России
+        img.official__img(src="../img/image-content/official-img.png")
+      .official__bottom
+        .official__subtitle
+          h3 Бортовые редукторы TIBUS
+        .official__text
+          p Желаете без проблем справляться с экстремальными ситуациями? Хотите безопасно добраться до необычных мест назначения по бездорожью? Столкнуться с уникальными задачами, преодолевая препятствия там, где другие терпят неудачу? Бортовые редуктора TIBUS ваш выбор!
+  section.services.section--mb-120.services(id="services")
+    .container
+      .section__top.section__top--mb-60
+        h2 Услуги
+      .services__list
+        +service({
+          title: 'Установка бортовых редукторов TIBUS',
+          price: '15000',
+          image: 'card-1.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Тюнинг подвески внедорожников',
+          price: '15000',
+          image: 'card-2.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Тюнинг подвески внедорожников',
+          price: '15000',
+          image: 'card-2.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Тюнинг рулевого управления',
+          price: '15000',
+          image: 'card-3.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Установка лебёдки',
+          price: '15000',
+          image: 'card-5.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Установка производительной тормозной системы',
+          price: '15000',
+          image: 'card-6.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Установка компрессора',
+          price: '15000',
+          image: 'card-7.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Установка и сборка колес',
+          price: '15000',
+          image: 'card-9.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Установка силовых бамперов и их изготовление на заказ',
+          price: '15000',
+          image: 'card-10.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Установка дополнительного освещения',
+          price: '15000',
+          image: 'card-11.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+        +service({
+          title: 'Тюнинг редукторов и мостов',
+          price: '15000',
+          image: 'card-12.png',
+          text: 'Создадим для вас уникальный Off-road-проект с учетом всех пожеланий и требований. Кастомный 6x6 или 4x4² поможет покорить любые вершины и самые непроходимые места.'
+        })(class="service--main")
+      .services__text
+        p Текст про гарантии и про сертифицированных мастеров. Рыбатекст используется дизайнерами, проектировщиками и фронтендерами, когда нужно быстро заполнить макеты или прототипы содержимым.
+  section.section.section--mb-120(id="project")
+    .container
+      .section__top.section__top--mb-60
+        h2 Проекты
+        .slider-controls
+          button.slider-controls__btn.slider-controls__btn--big(data-swiper="project-button-prev")
+            svg.slider-controls__btn-icon.slider-controls__btn-icon--big
+              use(href="#icon-slider-prev")
+          button.slider-controls__btn.slider-controls__btn--big(data-swiper="project-button-next")
+            svg.slider-controls__btn-icon.slider-controls__btn-icon--big
+              use(href="#icon-slider-next")
+      .slider.project__slider
+        .swiper(data-swipper="project")
+          .swiper-wrapper
+            .swiper-slide
+              +card({image: 'project-1.png', title: 'Jeep Wrangler', date: '13 декабря 2022', views: '126'})
+            .swiper-slide
+              +card({image: 'project-2.png', title: 'Toyota Tundra', date: '13 декабря 2022', views: '126'})
+            .swiper-slide
+              +card({image: 'project-1.png', title: 'Toyota Tundra', date: '13 декабря 2022', views: '126'})
+            .swiper-slide
+              +card({image: 'project-2.png', title: 'Toyota Tundra', date: '13 декабря 2022', views: '126'})
+  section.section.section--mb-120.upgrade
+    .container
+      .upgrade__container
+        .upgrade__title
+          h2  Выполним тюнинг вашего внедорожника перед сезоном
+        .upgrade__text
+          p Нужен апгрейд внедорожника, профессиональное обслуживание и подготовка к новому путешествию? Тогда тюнинг-ателье 4x4OK — надежный выбор.
+          p Поможем подобрать лучший тюниг, доставим, установим и зарегистрируем.
+        button.button.upgrade__button(data-modal-open="order") Оставить заявку
+  section.section.section--mb-120.about(id="about")
+    .container
+      .about__content
+        .section__top.section__top--mb-60
+          h2 О нас
+        img.about__img(src="../../img/image-content/about-img.png")
+        .about__subtitle
+          p Комплексный подход, уверенные действия
+        .about__text
+          p 4x4OK — тюнинг ателье глубокой доработки внедорожников в Москве. Мы занимаемся тюнингом и обслуживанием внедорожников , доставкой запчастей и тюнинга из США и Европы, профессиональной установкой тюнинга и дополнительного оборудования c 2012 года.
+          p Возьмём на себя все работы по созданию машины вашей мечты и подготовке внедорожника к реальным испытаниям бездорожья. В работе используем комплектующие и тюнинг от лучших производителей США и Европы, являемся официальным представителем крупных брендов в этой среде: TIBUS, Nitro-Gear, Radflo, PSC, FOX и многих других.
+  section.section.section--mb-120.awards
+    .container
+      .section__top.section__top--mb-50
+        h3 Наши награды
+        .slider-controls
+          button.slider-controls__btn.slider-controls__btn--big(data-swiper="awards-button-prev")
+            svg.slider-controls__btn-icon.slider-controls__btn-icon--big
+              use(href="#icon-slider-prev")
+          button.slider-controls__btn.slider-controls__btn--big(data-swiper="awards-button-next")
+            svg.slider-controls__btn-icon.slider-controls__btn-icon--big
+              use(href="#icon-slider-next")
+      .slider
+        .swiper.awards__slider(data-swipper="awards")
+          .swiper-wrapper
+            .swiper-slide.awards__slide
+              a.awards__img-wrapper.fancy(href="../img/image-content/diplom-1.png" data-fancybox="gallery")
+                img.awards__img(src="../img/image-content/diplom-1.png")
+            .swiper-slide.awards__slide
+              a.awards__img-wrapper.fancy(href="../img/image-content/diplom-2.png" data-fancybox="gallery")
+                img.awards__img(src="../img/image-content/diplom-2.png")
+            .swiper-slide.awards__slide
+              a.awards__img-wrapper.fancy(href="../img/image-content/diplom-1.png" data-fancybox="gallery")
+                img.awards__img(src="../img/image-content/diplom-1.png")
+            .swiper-slide.awards__slide
+              a.awards__img-wrapper.fancy(href="../img/image-content/diplom-2.png" data-fancybox="gallery")
+                img.awards__img(src="../img/image-content/diplom-2.png")
+            .swiper-slide.awards__slide
+              a.awards__img-wrapper.fancy(href="../img/image-content/diplom-1.png" data-fancybox="gallery")
+                img.awards__img(src="../img/image-content/diplom-1.png")
+            .swiper-slide.awards__slide
+              a.awards__img-wrapper.fancy(href="../img/image-content/diplom-2.png" data-fancybox="gallery")
+                img.awards__img(src="../img/image-content/diplom-2.png")
+            .swiper-slide.awards__slide
+              a.awards__img-wrapper.fancy(href="../img/image-content/diplom-1.png" data-fancybox="gallery")
+                img.awards__img(src="../img/image-content/diplom-2.png")
+  section.section.section--mb-120.benefits
+    .container
+      .benefits__content
+        .benefits__item(style="background-image: url('../img/image-content/benefits-1.png')")
+          span.benefits__item-title Премиальное качество
+          span.benefits__item-text Только сертифицированный тюнинг от лучших производителей США и Европы
+        .benefits__item(style="background-image: url('../img/image-content/benefits-2.png')")
+          span.benefits__item-title Установка по закону
+          span.benefits__item-text Берём на себя все работы от установки тюнинга до его оформления и регистрации
+        .benefits__item(style="background-image: url('../img/image-content/benefits-3.png')")
+          span.benefits__item-title Доработка уровня PRO
+          span.benefits__item-text Подготовим ваш внедорожник к реальным испытаниям бездорожьем
+  section.section.section--mb-120.brands
+    .container
+      .section__top.section__top--mb-60
+        h2 Бренды
+      .brands__list
+        +brand('brand-1.png')
+        +brand('brand-2.png')
+        +brand('brand-3.png')
+        +brand('brand-4.png')
+        +brand('brand-5.png')
+        +brand('brand-6.png')
+        +brand('brand-7.png')
+        +brand('brand-8.png')
+        +brand('brand-9.png')
+        +brand('brand-10.png')
+        +brand('brand-11.png')
+        +brand('brand-12.png')
+        +brand('brand-13.png')
+        +brand('brand-14.png')
+        +brand('brand-15.png')
+        +brand('brand-16.png')
+  section.section.section--mb-120.blog
+    .container
+      .section__top.section__top--mb-60
+        h2 Блог
+        .slider-controls
+          button.slider-controls__btn.slider-controls__btn--big(data-swiper="blog-button-prev")
+            svg.slider-controls__btn-icon.slider-controls__btn-icon--big
+              use(href="#icon-slider-prev")
+          button.slider-controls__btn.slider-controls__btn--big(data-swiper="blog-button-next")
+            svg.slider-controls__btn-icon.slider-controls__btn-icon--big
+              use(href="#icon-slider-next")
+      .slider.blog__slider
+        .swiper(data-swipper="blog")
+          .swiper-wrapper
+            .swiper-slide
+              +card({
+                image: 'blog-1.png',
+                title: 'Частокол на границе стал нашим флагом в борьбе с ложью',
+                tag: 'Советы',
+                date: '13 декабря 2022',
+                views: '126'
+              })
+            .swiper-slide
+              +card({
+                image: 'blog-2.png',
+                title: 'Давайте не забывать, что новая модель организационной деятельности разочаровала',
+                tag: 'Советы',
+                date: '13 декабря 2022',
+                views: '126'
+              })
+            .swiper-slide
+              +card({
+                image: 'blog-3.png',
+                title: 'Финансовый мир очнулся: звук клавиш печатной машинки определил дальнейшее развитие',
+                tag: 'Советы',
+                date: '13 декабря 2022',
+                views: '126'
+              })
+            .swiper-slide
+              +card({
+                image: 'blog-4.png',
+                title: 'Да, объемы выросли',
+                tag: 'Советы',
+                date: '13 декабря 2022',
+                views: '126'
+              })
+            .swiper-slide
+              +card({
+                image: 'blog-5.png',
+                title: 'Обучение кадров — приоритетная задача',
+                tag: 'Советы',
+                date: '13 декабря 2022',
+                views: '126'
+              })
+            .swiper-slide
+              +card({
+                image: 'blog-6.png',
+                title: 'Сложно сказать, почему глубокий уровень погружения определил дальнейшее развитие',
+                tag: 'Советы',
+                date: '13 декабря 2022',
+                views: '126'
+              })
+            .swiper-slide
+              +card({
+                image: 'blog-7.png',
+                title: 'Герцог графства коронован',
+                tag: 'Советы',
+                date: '13 декабря 2022',
+                views: '126'
+              })
+            .swiper-slide
+              +card({
+                image: 'blog-8.png',
+                title: 'Политика не может не реагировать на грохот грома грядущих изменений',
+                tag: 'Советы',
+                date: '13 декабря 2022',
+                views: '126'
+              })
+      a(href="/blog.html").button.button--full-width.blog__link В блог
+  section.section.section--mb-120.answer(id="answer")
+    .container
+      .section__top.section__top--mb-60
+        h2 Отвечаем на ваши вопросы
+      .answer__accordion(data-accordions-group)(data-accordion-answer)
+        +accordion({
+          title: "В чем заключается тюнинг внедорожника?",
+          text: "Основная задача тюнинга — подготовка внедорожника для прохождения заданного маршрута. Для этого мы улучшаем сцепные качества, повышаем выносливость, геометрическую проходимость. Мы подготавливаем внедорожники к преодолению бродов, передвижению по мягкому грунту и другим нестандартным условиям. В полной мере раскрываем потенциал авто, а также устанавливаем дополнительную защиту на кузов",
+        })
+        +accordion({
+          title: "Какие тюнинговые элементы и агрегаты вы используете?",
+          text: "Основная задача тюнинга — подготовка внедорожника для прохождения заданного маршрута. Для этого мы улучшаем сцепные качества, повышаем выносливость, геометрическую проходимость. Мы подготавливаем внедорожники к преодолению бродов, передвижению по мягкому грунту и другим нестандартным условиям. В полной мере раскрываем потенциал авто, а также устанавливаем дополнительную защиту на кузов",
+        })
+        +accordion({
+          title: "Сколько стоит тюнинг внедорожника?",
+          text: "Основная задача тюнинга — подготовка внедорожника для прохождения заданного маршрута. Для этого мы улучшаем сцепные качества, повышаем выносливость, геометрическую проходимость. Мы подготавливаем внедорожники к преодолению бродов, передвижению по мягкому грунту и другим нестандартным условиям. В полной мере раскрываем потенциал авто, а также устанавливаем дополнительную защиту на кузов",
+        })
+        +accordion({
+          title: "Как быть с регистрацией тюнинга, учитывая серьезные требования ГИБДД?",
+          text: "Основная задача тюнинга — подготовка внедорожника для прохождения заданного маршрута. Для этого мы улучшаем сцепные качества, повышаем выносливость, геометрическую проходимость. Мы подготавливаем внедорожники к преодолению бродов, передвижению по мягкому грунту и другим нестандартным условиям. В полной мере раскрываем потенциал авто, а также устанавливаем дополнительную защиту на кузов.",
+        })
+  section.section.section--mb-120.order
+    .container
+      .section__top.section__top--mb-60.order__top
+        h2 Остались вопросы
+      .order__content
+        .order__form-wrapper
+          +incut-form({
+            form: 'order',
+            thanksTitle: "Спасибо за интерес к нашему делу",
+            thanksText: "Мы свяжемся с вами в ближайшее время",
+          })
+        .order__img-wrapper
+          img.order__img(src="../../img/image-content/order-img.png")

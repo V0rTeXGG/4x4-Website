@@ -1,0 +1,29 @@
+include ../input/input.pug
+
+mixin incut-form(data)
+  .incut-form-wrapper(data-form=`${data.form}`)
+    form.incut-form.invalid(data-validate-form="" data-form-body="" data-show-thanks)
+      if(data.formText)
+        .incut-form__placeholder
+          span=data.formText
+      .incut-form__fields
+        +input({
+          temp: "name",
+        })&attributes(attributes)
+        +input({
+          temp: "phone",
+          mask: true,
+        })&attributes(attributes)(data-mask-tel)
+        +input({
+          temp: "email",
+        })&attributes(attributes)
+        .inputholder.form__inputholder
+          label.inputholder__label(data-default-label) Комментарий
+          textarea.inputholder__textarea(data-form-field)&attributes(attributes)
+      p.incut-form__text Отправляя форму, я соглашаюсь с
+        span.incut-form__policy(data-modal-open="policy")  политикой конфиденциальности
+      .buttonholder.button-wrapper(data-form-trigger="")
+        button.button.button--full-width.incut-form__submit(disabled="true" data-form-button="") Оставить заявку
+    .form__thanks(data-form-thanks="")
+      p.form__thanks-title=data.thanksTitle
+      p.form-thanks-text=data.thanksText

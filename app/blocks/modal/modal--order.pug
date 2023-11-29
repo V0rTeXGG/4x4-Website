@@ -1,0 +1,13 @@
+include ../components/form/form.pug
+
+.modal(data-modal="order")
+  .modal__close(data-modal-close="")
+  .modal__title
+    span Мы на связи
+  .modal__container(data-scroll-container="")
+    +incut-form({
+      form: 'modal',
+      formText: 'Хотите проконсультироваться по апгрейду вашего внедорожника или рассчитать стоимость работ?',
+      thanksTitle: 'Спасибо!',
+      thanksText: 'Мы получили вашу заявку и свяжемся с вами в ближайшее время',
+    }).modal__input

@@ -1,0 +1,8 @@
+mixin article-info(data)
+  .article-info&attributes(attributes)
+    p.article-info__date=data.date
+    if(data.tag)
+      p.article-info__tag=data.tag
+    span.article-info__views=data.views
+      svg.article-info__views-icon
+        use(href="#icon-eye")

@@ -1,0 +1,55 @@
+mixin input(data)
+    -
+        if (data.temp) {
+            if (data.temp === "name") {
+                data.label = "Имя*";
+                data.type = "name";
+                data.required = true;
+                data.error = 'Заполните поле';
+            }
+
+            if (data.temp === "phone") {
+                data.label = "Номер телефона*"
+                data.type = "tel";
+                data.required = true;
+                data.error = "Заполните поле";
+
+            }
+
+            if (data.temp === "email") {
+                data.label = "Email";
+                data.type = "email";
+                data.error = "Заполните поле";
+            }
+            if(data.temp === "text") {
+                data.label = "Комментария";
+                data.type = "text";
+            }
+        }
+    .inputholder.form__inputholder(class=(data.width ? `inputholder--width-${data.width}` : ""))(data-custom-mask=data.mask ? true : undefined)
+      if data.label
+        label.inputholder__label(data-default-label)=data.label
+      input.inputholder__input(type=(data.type || "text") placeholder=(data.placeholder) data-required=(data.required) data-text-error=(data.error))&attributes(attributes)(data-input)
+      if data.error
+        label.error-text=data.error
+      if data.imageError
+        svg.image-error(class=(data.customErrorClass ? `image-error-${data.customErrorClass}` : ""))
+          use(href=`#icon-${data.imageError}`)
+
+//- Примеры использования
+
+//- +input({
+//-     temp: "email",
+//- })
+
+//- +input({
+//-     temp: "phone",
+//- })(data-mask-tel class="example-class")
+
+//- +input({
+//-     label: "Адрес",
+//-     placeholder: "Введите адрес",
+//-     required: true,
+//-     error: "address",
+//-     width: "half"
+//- })

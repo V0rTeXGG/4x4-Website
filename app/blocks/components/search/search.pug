@@ -1,0 +1,6 @@
+mixin search()
+  form.form-search
+    button(type="submit").form-search__btn
+      svg.form-search__icon(data-search-icon)
+        use(href="#icon-search")
+    input.form-search__input(placeholder="Что вы ищите?")(data-search-input)

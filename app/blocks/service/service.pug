@@ -1,0 +1,12 @@
+mixin service(data)
+  .service&attributes(attributes)
+    .service__content
+      .service__top
+        img.service__image(src=`../../img/image-content/${data.image}`)(alt=data.title)
+        p.service__title=data.title
+        p.service__price=`от ${data.price}₽`
+      span.service__button Подробнее
+    .service__content--hidden
+      .service__text
+        p=data.text
+      button.button.button--full-width(data-modal-open="order") Оставить заявку

@@ -1,0 +1,15 @@
+mixin social(repost)
+    .social
+        a.social__item(href="vk.org" target="_blank")
+            svg.social__icon(width="34" height="34")
+                use(href='#icon-vk')
+        a.social__item(href="telegram.com" target="_blank")
+            svg.social__icon(width="34" height="34")
+                use(href='#icon-telegram')
+        a.social__item(href="whatsapp.com" target="_blank")
+            svg.social__icon(width="34" height="34")
+                use(href='#icon-whats-app')
+        if !repost
+          a.social__item(href="instagram.com" target="_blank")
+            svg.social__icon(width="34" height="34")
+              use(href='#icon-instagram')

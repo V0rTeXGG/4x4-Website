@@ -1,0 +1,16 @@
+include ../logo/logo.pug
+include ../nav/nav.pug
+.ref-header
+header.header(data-lock-scroll)
+    .container
+        .header__row
+            +logo("logo.svg")(class="header__logo")
+            .header__menu(data-header-menu)
+              +nav()(class="header__nav")
+              .header__contacts
+                span Будни 10 — 20
+                a.header__contacts-phone(href="tel:+78002227708 ") +7 (800) 222 77-08
+            burger.header__burger(data-open-header-menu="")
+              span
+              span
+              span

@@ -1,0 +1,14 @@
+mixin card(data)
+  a(href="/").card&attributes(attributes)
+    .card__img-wrapper
+      img.card__img(src=`../../img/image-content/${data.image}`)(alt=`${data.title}`)
+    .card__content
+      .card__content-top
+        p.card__content-date=data.date
+        if(data.tag)
+          p.card__tag=data.tag
+        span.card__content-views=data.views
+          svg.card__content-views-icon
+            use(href="#icon-eye")
+      .card__title
+        p=data.title

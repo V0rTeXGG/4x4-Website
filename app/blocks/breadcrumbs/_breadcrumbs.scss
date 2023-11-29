@@ -1,0 +1,43 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+  &__item {
+    position: relative;
+    margin: 0 29px 0 0;
+    text-decoration: none;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0.24px;
+    color: $color-white;
+
+    a {
+      color: $color-white;
+    }
+
+    &::before {
+      content: '❯';
+      position: absolute;
+      width: 1px;
+      height: 100%;
+      top: 0;
+      transform: translateY(20%);
+      right: -14px;
+      font-size: 8px;
+      font-weight: 500;
+      line-height: 135%;
+      letter-spacing: 0.16px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

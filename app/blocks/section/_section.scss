@@ -1,0 +1,24 @@
+.section {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--mb-50 {
+      margin-bottom: 50px;
+    }
+
+    &--mb-60 {
+      margin-bottom: 60px;
+    }
+  }
+
+  &--mb-90 {
+    margin-bottom: 90px;
+  }
+
+  &--mb-120 {
+    margin-bottom: 120px;
+  }
+}

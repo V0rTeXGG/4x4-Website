@@ -1,0 +1,82 @@
+extends ../../template/template.pug
+include ../../blocks/heading/heading.pug
+include ../../blocks/components/search/search.pug
+include ../../blocks/card/card.pug
+block mainwrapper
+  .page
+    +heading({
+      class: 'blog',
+      breadcrumbs: ["Блог"],
+      title: "Блог",
+    }).blog__heading
+    section.section.section--mb-120.blog
+      .container
+        .blog__controls
+          .blog__controls-tags
+            span.blog__controls-tag.active Все
+            span.blog__controls-tag Советы
+            span.blog__controls-tag Кейсы
+            span.blog__controls-tag Какой-то тег
+          +search()
+        .blog__not-found(style="display: none")
+          h2  Мы ничего не нашли
+          .blog__not-found-text
+            p Попробуйте уточнить запрос
+        .blog__articles
+          +card({
+            image: 'blog-1.png',
+            title: 'Частокол на границе стал нашим флагом в борьбе с ложью',
+            tag: 'Советы',
+            date: '13 декабря 2022',
+            views: '126'
+          }).blog__article
+          +card({
+            image: 'blog-2.png',
+            title: 'Давайте не забывать, что новая модель организационной деятельности разочаровала',
+            tag: 'Советы',
+            date: '13 декабря 2022',
+            views: '126'
+          }).blog__article
+          +card({
+            image: 'blog-3.png',
+            title: 'Финансовый мир очнулся: звук клавиш печатной машинки определил дальнейшее развитие',
+            tag: 'Советы',
+            date: '13 декабря 2022',
+            views: '126'
+          }).blog__article
+          +card({
+            image: 'blog-4.png',
+            title: 'Да, объемы выросли',
+            tag: 'Советы',
+            date: '13 декабря 2022',
+            views: '126'
+          }).blog__article
+          +card({
+            image: 'blog-5.png',
+            title: 'Обучение кадров — приоритетная задача',
+            tag: 'Советы',
+            date: '13 декабря 2022',
+            views: '126'
+          }).blog__article
+          +card({
+            image: 'blog-6.png',
+            title: 'Сложно сказать, почему глубокий уровень погружения определил дальнейшее развитие',
+            tag: 'Советы',
+            date: '13 декабря 2022',
+            views: '126'
+          }).blog__article
+          +card({
+            image: 'blog-7.png',
+            title: 'Герцог графства коронован',
+            tag: 'Советы',
+            date: '13 декабря 2022',
+            views: '126'
+          }).blog__article
+          +card({
+            image: 'blog-8.png',
+            title: 'Политика не может не реагировать на грохот грома грядущих изменений',
+            tag: 'Советы',
+            date: '13 декабря 2022',
+            views: '126'
+          })
+        button.button.button--full-width Показать ещё

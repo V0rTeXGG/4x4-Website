@@ -1,0 +1,62 @@
+.incut-form {
+  width: 100%;
+
+  &__placeholder {
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 145%;
+    color: $color-border;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
+  &__input--comment {
+    min-height: 135px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0.41px;
+  }
+
+  &__policy {
+    color: $color-red-super-light;
+    cursor: pointer;
+  }
+
+  &__submit {
+    margin-top: 24px;
+  }
+
+}
+
+.form__thanks {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  min-height: 534px;
+
+
+  &-title {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+
+  &-text {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 145%;
+  }
+}

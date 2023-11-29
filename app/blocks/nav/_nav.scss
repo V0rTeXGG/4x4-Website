@@ -1,0 +1,22 @@
+.nav {
+  max-width: 445px;
+  width: 100%;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21.6px;
+    letter-spacing: 0.32px;
+    color: $color-text-main;
+    transition: all $transition;
+    @include hover {
+      color: $color-red-light;
+    }
+  }
+}

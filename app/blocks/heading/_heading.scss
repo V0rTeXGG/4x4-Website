@@ -1,0 +1,15 @@
+.heading {
+  &__row {
+    padding-top: 20px;
+  }
+
+  &.blog {
+    margin-bottom: 60px;
+  }
+
+  &.article-page {
+    max-width: 1216px;
+    margin: 0 auto 30px auto;
+  }
+}
+

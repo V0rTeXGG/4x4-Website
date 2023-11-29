@@ -1,0 +1,14 @@
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 164px;
+  height: 164px;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: $color-text-main;
+  @include media(max, 575) {
+    width: 151px;
+    height: 151px;
+  }
+}

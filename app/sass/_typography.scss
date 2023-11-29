@@ -1,0 +1,35 @@
+main {
+  h1 {
+    font-family: $font-unbounded;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    @include media(max, 575) {
+      font-size: 32px;
+    }
+  }
+  h2 {
+    font-family: $font-unbounded;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    @include media(max, 575) {
+      font-size: 28px;
+    }
+  }
+  h3 {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 120%;
+    @include media(max, 575) {
+      font-size: 26px;
+    }
+  }
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+}

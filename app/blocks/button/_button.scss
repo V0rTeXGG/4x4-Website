@@ -1,0 +1,28 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 199px;
+  min-height: 59px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 130%;
+  background-color: $color-red;
+  transition:all $transition;
+  cursor: pointer;
+  &[disabled] {
+    background-color: $color-red-super-light;
+    pointer-events: none;
+  }
+  @include hover {
+    background-color: $color-red-light;
+  }
+  &--full-width {
+    width: 100%;
+  }
+
+  &-big--heigth {
+    min-height: 64px;
+  }
+}

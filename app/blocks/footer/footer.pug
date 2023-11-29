@@ -1,0 +1,24 @@
+include ../social/social.pug
+
+footer.footer(data-lock-scroll)
+  .container
+    .footer__top
+      .footer__left
+        +logo("logo-footer.svg")(class="footer__logo")
+        .footer__block
+          p.footer__block-text Подписаться
+            +social
+        .footer__block
+          p.footer__block-text Позвонить
+          a.footer__block-contact(href="tel:+78002227708") +7 (800) 222 77-08
+          p.footer__block-text Будни 10 — 20
+        .footer__block
+          p.footer__block-text Написать
+          a.footer__block-contact(href="mail-to:info@4x4ok.ru") info@4x4ok.ru
+      .footer__block.footer__adress
+        p.footer__block-text Приехать
+        a.footer__block-contact(href="https://yandex.ru/maps/-/CDeBYVlR" target="_blank") Московская область, городской округ Красногорск, деревня Гольёво, Центральная улица, с44
+    .footer__bottom
+      button.footer__text(data-modal-open="policy") Политика конфиденциальности
+      span.footer__text.footer__text--white Разработано
+        a.footer__text(href="https://texterra.ru/") TexTerra

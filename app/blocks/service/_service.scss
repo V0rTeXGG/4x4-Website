@@ -1,0 +1,122 @@
+.service {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background-color: $color-background;
+  border: 2px solid transparent;
+  transition: all $transition;
+  @include hover {
+    border-color: $color-red;
+  }
+  @include hover {
+    .service__content--hidden {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    pointer-events: none;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+
+    &--hidden {
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      background-color: $color-background;
+      transition: all $transition;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-family: $font-unbounded;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px;
+  }
+
+  &__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 130%;
+  }
+
+  &__price {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+  }
+
+  &__button {
+    position: relative;
+    max-width: 124px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      background: url("../../img/image/arrow-bottom.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+

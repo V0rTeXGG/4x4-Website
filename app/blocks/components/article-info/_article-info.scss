@@ -1,0 +1,38 @@
+.article-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  width: fit-content;
+
+  &__date {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0.32px;
+  }
+
+  &__tag {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 130%;
+    letter-spacing: 0.32px;
+  }
+
+  &__views {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0.32px;
+    color: $color-grey;
+
+    &-icon {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.social {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  &__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+  }
+  &__icon {
+		transition: all $transition;
+    fill: $color-text-main;
+    @include hover {
+      fill: $color-grey
+    }
+  }
+}

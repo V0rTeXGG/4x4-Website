@@ -1,0 +1,161 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 11;
+  transition: all $transition;
+
+  &.fixed {
+    background-color: $color-background;
+  }
+
+  &.fixed  &__row {
+    padding: 20px 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 30px 0;
+    transition: all $transition;
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 11;
+  }
+
+  &__nav {
+    margin-right: 10px;
+
+    .nav__list {
+      @include media(max, 991) {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 862px;
+    width: 100%;
+    @include media(max, 991) {
+      position: fixed;
+      top: 98px;
+      left: -100%;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+      gap: 75px;
+      max-width: 100%;
+      padding: 52px 28px 28px 28px;
+      overflow-y: scroll;
+      background-color: $color-background;
+      transition: all $transition;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &.active {
+      left: 0;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    max-width: 267px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.2px;
+    color: $color-grey;
+    @include media(max, 991) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    &-phone {
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.32px;
+      color: $color-text-main;
+      transition: all $transition;
+      @include hover {
+        color: $color-red-light;
+      }
+    }
+  }
+
+  &__burger {
+    position: relative;
+    display: none;
+    width: 58px;
+    height: 58px;
+    padding: 18px;
+    border-radius: 4px;
+    background-color: $color-red;
+    @include media(max, 991) {
+      display: block;
+    }
+
+    span {
+      position: absolute;
+      top: 22px;
+      left: 18px;
+      width: 20px;
+      min-height: 2px;
+      border-radius: 8px;
+      background-color: #fff;
+
+      &:nth-of-type(1) {
+        transition: top ease .15s .15s, transform ease .15s
+      }
+
+      &:nth-of-type(2) {
+        top: 50%;
+        transform: translateY(-50%);
+        height: 2.5px;
+        transition: opacity ease .15s .15s;
+      }
+
+      &:nth-of-type(3) {
+        top: 34px;
+        transition: top ease .15s .15s, transform ease .15s
+      }
+    }
+
+    &.active {
+
+      span {
+
+        &:nth-of-type(1) {
+          top: 28px;
+          transform: rotate(45deg);
+          transition: top ease .15s, transform ease .15s .15s;
+        }
+
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        &:nth-of-type(3) {
+          top: 28px;
+          transform: rotate(-45deg);
+          transition: top ease .15s, transform ease .15s .15s;
+        }
+      }
+    }
+  }
+}

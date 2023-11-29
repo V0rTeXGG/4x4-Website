@@ -1,0 +1,6 @@
+mixin banner(image, title)
+  .banner-slide(style="background-image: url(../img/image-content/"+image+")")
+    .banner-slide__conteiner
+      .banner-slide__content
+        p.banner-slide__title= title
+        button.button.button-big--heigth(data-modal-open="order") Оставить заявку

@@ -1,0 +1,25 @@
+mixin nav()
+    nav.nav&attributes(attributes)
+      ul.nav__list
+        li.nav__item
+          a.nav__link(href="/#tibus") Tibus
+        li.nav__item
+          a.nav__link(href="/#services") Услуги
+        li.nav__item
+          a.nav__link(href="/#project") Проекты
+        li.nav__item
+          a.nav__link(href="/#about") О нас
+        li.nav__item
+          a.nav__link(href="/blog.html") Блог
+        li.nav__item
+          a.nav__link(href="/#answer") Вопросы
+        //ul.nav__list
+        //    each item in list
+        //        li.nav__item
+        //            a.nav__link(href="#")=item
+
+//- Примеры использования
+
+//- +nav(["О нас", "Доставка"])
+
+//- +nav(["О нас", "Доставка", "Контакты"])(class="header__nav")
